@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "morgan": "^1.10.0"
+  },
+  "dependencies": {
+    "serve-favicon": "^2.5.0"
   }
 }
