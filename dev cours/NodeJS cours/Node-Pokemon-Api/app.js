@@ -12,11 +12,12 @@ app.get('/api/pokemon/:id', (req,res)=>{
     const pokemon = pokemons.find(pokemon => pokemon.id === id)
     const message = 'Un pokémon a bien été trouvé.'
      res.json(success(message, pokemon))
-
-    })
+     })
 
 app.get('/api/pokemons',(req,res)=>{
-    res.send(`Il y a ${pokemons.length} pokémons dans le pokédex, pour le moment.`)
+    const id = parseInt(req.params.id)
+    const message = 'Voici la liste des pokémons'
+    res.json(success(message, pokemons))
     })
 
 app.listen(port, () => console.log(`Notre appliction Node est démarée sur : http://localhost:${port}`)) //demarre l'api reste
