@@ -1,0 +1,32 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "i1 i1 i2"
+    "i3 i4 i2"
+    "i3 i5 i5";
+  width: 50%;
+  height: 300px;
+  gap: 15px;
+}
+
+div:nth-child(1) {
+  background: yellow;
+  grid-area: i1;
+}
+div:nth-child(2) {
+  background: purple;
+  grid-area: i2;
+}
+div:nth-child(3) {
+  background: green;
+  grid-area: i3;
+}
+div:nth-child(4) {
+  background: red;
+  grid-area: i4;
+}
+div:nth-child(5) {
+  background: orchid;
+  grid-area: i5;
+}

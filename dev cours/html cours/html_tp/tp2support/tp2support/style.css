@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 0, 0, 0.452);
+  font-family: "Inter", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+body {
+  background: rgb(48, 48, 48);
+}
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  background: rgb(48, 48, 48);
+  color: white;
+}
+nav h3 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-style: bold;
+  font-size: 1.3rem;
+}
+nav ul {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 20px;
+}
+.menu li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+header {
+  width: 100%;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-left: 20px;
+}
+.text h2 {
+  color: white;
+  font-size: 6rem;
+
+  font-style: normal;
+}
+.text h3 {
+  color: rgb(60, 60, 255);
+  font-size: 2.1rem;
+}
+.text p {
+  color: white;
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
+img {
+  width: 100%;
+  padding: 3%;
+}
+.footer {
+  width: 99%;
+  margin-bottom: 20px;
+  background-color: black;
+  margin-left: 0.5%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  border-radius: 10px;
+}
+.footerleft {
+  width: 35%;
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.footerleft h4 {
+  font-size: 1.4rem;
+}
+.footerleft ul {
+  width: 200px;
+  text-align: center;
+  list-style: none;
+}
+.bt {
+  background-color: rgb(63, 63, 255);
+  margin: 10px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerright {
+  width: 65%;
+
+  padding: 15px;
+}
+.footerright h4 {
+  font-size: 1.4rem;
+}
+.imagefooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+/* responsive tablette 1006 x 920 */
+@media screen and (max-width: 1007px) {
+  nav {
+    height: 100px;
+  }
+  nav h3 {
+    padding-left: 40px;
+    font-size: 2rem;
+  }
+  .menu li {
+    font-size: 1.2rem;
+  }
+  header {
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 520px;
+  }
+  .text h2 {
+    color: white;
+    font-size: 3.5rem;
+
+    font-style: normal;
+  }
+  .text h3 {
+    color: rgb(60, 60, 255);
+    font-size: 1.35rem;
+  }
+  .text p {
+    color: white;
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+}
+/* responsive mobile 511 x 1117 */
+@media screen and (max-width: 512px) {
+  nav h3 {
+    width: 25%;
+  }
+  nav ul {
+    width: 75%;
+    margin-left: 15%;
+  }
+  header {
+    margin-top: 30px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .text {
+    height: 100%;
+  }
+  .text h2 {
+    font-size: 3.15rem;
+  }
+  .text h3 {
+    font-size: 1.2rem;
+    padding-top: 15px;
+  }
+  .text p {
+    color: white;
+    padding-top: 20px;
+    font-size: 1rem;
+  }
+  img {
+    width: 60%;
+  }
+  .divfooter {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  .footerleft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerleft h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .footerleft ul {
+    width: 230px;
+    text-align: center;
+    list-style: none;
+    font-size: 1.3rem;
+  }
+  .bt {
+    background-color: rgb(63, 63, 255);
+
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerright h4 {
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+  }
+  .imagefooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+  }
+  .imagefooter li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}

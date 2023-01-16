@@ -1,0 +1,177 @@
+/* fil rouge : selecteur, dimensions, couleurs */
+/* Texte */
+/* Background */
+/* Boxes */
+/* Positioning */
+/* Flex */
+/* Grid */
+/* Pseudo Class */
+/* Debug */
+/* Responsive */
+
+/* import dune police d'ecriture d'internet */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+/* import d'une police telecherger */
+@font-face {
+  font-family: font-1;
+  src: url(./assets/BhuTukaExpandedOne-Regular.ttf);
+}
+
+/* s'applique sur tout */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(./assets/bg.jpg) no-repeat fixed center/cover;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* rem pour les textes */
+  font-size: 2.5rem;
+  color: rgb(83, 83, 255);
+  text-shadow: 5px 3px 3px #7374788f;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+main {
+  background-color: whitesmoke;
+  /* largeur en pourcentage */
+  width: 85%;
+  /* hauteur en pixel */
+  /* height: 500px; */
+  /* centrer une boite*/
+  margin: 10px auto;
+  /* pading = margin interieur */
+  padding: 15px;
+  /* arrondir les bords d'une boite */
+  border-radius: 10px;
+  box-shadow: 5px 4px 3px 0px #a5a5ffde;
+}
+
+/* class */
+.positioning,
+.flexbox,
+.grid {
+  border: 2px solid #a5a5ffde;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-family: "Oswald", sans-serif;
+}
+/* --------------------------Positioning----------------------------- */
+.positioning {
+  position: relative;
+}
+
+/* id */
+#circle {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(144, 177, 248);
+  padding: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 110px;
+  /* layer */
+  z-index: 1;
+}
+
+#rectangle {
+  height: 15px;
+  width: 100px;
+  background-color: rgb(83, 83, 255);
+  padding: 20px;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  /* centrer laxe de lobjet */
+  transform: translate(-50%);
+}
+/* --------------------------Flexbox----------------------------- */
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  list-style-type: none;
+  font-size: 0.7rem;
+  height: 160px;
+  width: 160px;
+  background-color: rgb(203, 230, 255);
+  /* centrer verticalement */
+  display: flex;
+  align-items: center;
+  /* centrer horizontalement */
+  justify-content: center;
+}
+/* ---------------------Grid------------------------------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 20px;
+}
+
+.img {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "bt bt";
+}
+input,
+textarea {
+  margin: 5px;
+  height: 45px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+#firstname {
+  grid-area: i1;
+}
+#surname {
+  grid-area: i2;
+}
+textarea {
+  grid-area: ta;
+  resize: none;
+}
+input[type="submit"] {
+  grid-area: bt;
+  cursor: pointer;
+  transition: 0.4s;
+}
+input[type="submit"]:hover {
+  background-color: rgb(228, 224, 255);
+}
+/* -------------------------Responsive--------------------------- */
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 700px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "ta"
+      "bt";
+  }
+}
