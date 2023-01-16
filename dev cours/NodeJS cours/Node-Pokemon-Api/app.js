@@ -1,9 +1,12 @@
 const express = require('express') //chercher la dependance 'express
+const morgan = require('morgan')
 const { success } = require('./helper')
 let pokemons = require('./mock.pokemon');
 
 const app = express() //instance dune application express(serveur web)
 const port = 3000 //port
+
+app.use(morgan('dev'))
 
 app.get('/', (req,res) => res.send('Hello, Express !')) //definie un point de terminaison
 
