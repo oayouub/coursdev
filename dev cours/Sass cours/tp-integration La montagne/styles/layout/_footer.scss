@@ -1,0 +1,85 @@
+footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 0 40px;
+        padding: 60px 0;
+
+        label{
+            font-size: 0.7rem;
+            font-family: $font2;
+            font-weight:600;
+            color: grey;
+        }
+
+        #name{
+            height: 30px;
+            border:1px solid rgb(216, 216, 216);;
+        }
+        #email{
+            height: 30px;
+            border:1px solid rgb(216, 216, 216);;
+        }
+        #MSG{
+            height: 150px;
+            border:1px solid rgb(216, 216, 216);;
+        }
+        #valider{
+            background: none;
+            border: 2px solid rgb(156, 156, 156);
+            padding: 10px;
+            letter-spacing: 1px;
+            color: rgb(83, 83, 83);
+            font-size: 0.6rem;
+            font-family: $font2;
+            font-weight: 600;
+            width: 30%;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    .contact{
+        display:grid ;
+        grid-template-rows: 25% 25% 25% 25%;
+        border-left: 1px solid rgb(216, 216, 216);
+        height: 100%;
+
+        .contact-content{
+            display: grid;
+            grid-template-columns: 25% 75%;
+            border-bottom: 1px solid rgb(216, 216, 216);
+            h3{
+                @include center;
+                font-size: 0.7rem;
+                color: grey;
+            }
+            p{
+                display: flex;
+                align-items: center;
+                font-size: 0.8rem;
+                color: rgb(155, 155, 155);
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                li{
+                    border: 1px solid rgb(216, 216, 216);
+                    padding: 10px;
+                    border-radius: 100px;
+                }
+            }
+        }
+    }
+}

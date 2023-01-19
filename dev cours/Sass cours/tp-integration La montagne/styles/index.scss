@@ -1,0 +1,27 @@
+@import "./layout/settings";
+@import "./layout/header";
+@import "./layout/navbar";
+@import "./layout/section1";
+@import "./layout/section2";
+@import "./layout/footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // border: 1px solid red;
+}
+body{
+    background: url(./images/bg.jpg) fixed;
+    background-size: cover;
+    
+    @include center;
+    flex-direction: column;
+    .page{
+        width: 70%;
+        overflow: hidden;
+        background-color: $color1;
+
+        
+    }
+}

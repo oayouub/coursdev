@@ -1,0 +1,35 @@
+.section1{
+    @include center;
+    flex-direction: column;
+    gap: 40px;
+   margin-top: 40px;
+   margin-bottom: 80px;
+    .p-date{
+        color: grey;
+    }
+    h2{
+        font-family: $font1;
+        font-size: 2.5rem;
+        width: 45%;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .p-lorem{
+        font-size: 0.8rem;
+        width: 40%;
+        text-align: center;
+        line-height: 1.8rem;
+    }
+    img{
+        width: 80%;
+    }
+    .btn{
+        background: none;
+        border: 2px solid $color3;
+        padding: 10px 30px;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+        font-family: $font2;
+        font-weight: 600;
+    }
+}

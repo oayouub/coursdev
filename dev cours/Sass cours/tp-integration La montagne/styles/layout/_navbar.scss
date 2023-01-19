@@ -1,0 +1,42 @@
+nav{
+    background-color: $color2;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 10vh;
+    width: 70%;
+    .menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        color: $color1;
+        font-family: $font2;
+        letter-spacing: 1px;
+
+        
+        li{
+            font-size: 0.7rem;
+            padding: 0 15px;
+            height: 100%;
+            @include center;
+            &:hover{
+                background-color: rgb(247, 247, 247);
+                color: $color3;
+            }
+        }
+    }
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        color: $color1;
+        font-family: $font2;
+        
+
+        
+        li{
+            font-size: 0.7rem;
+            padding: 0 30px;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+header{
+    color: $color1;
+    @include center;
+    flex-direction: column;
+    height: 90vh;
+
+    h1{
+        font-size: 3.5rem;
+        width:55%;
+        font-family: $font1;
+        text-align: center;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
