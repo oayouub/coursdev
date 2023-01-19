@@ -1,0 +1,16 @@
+@font-face {
+    font-family:"font1";
+    src: url(../fonts/Noto_Sans/NotoSans-Light.ttf);
+}
+
+$font1:font1, sans-serif;
+$color1: pink;
+$color2: rgb(153, 153, 255);
+$color3: black;
+
+//MIXIN
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

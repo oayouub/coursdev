@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "font1";
+  src: url(../fonts/Noto_Sans/NotoSans-Light.ttf);
+}
+body {
+  background-color: rgb(153, 153, 255);
+  font-family: font1, sans-serif;
+}
+
+h1 {
+  font-family: font1, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+h1::after {
+  content: "*";
+  position: absolute;
+  transform: translateY(-6px);
+  color: pink;
+}
+h1:hover:after {
+  font-size: 2em;
+}
+
+section {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section p {
+  text-align: center;
+  width: 50%;
+}
+
+nav {
+  background-color: pink;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
+nav ul li {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}/*# sourceMappingURL=index.css.map */

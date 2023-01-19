@@ -1,0 +1,31 @@
+body{
+    background-color: $color2;
+    font-family: $font1;
+}
+
+h1{
+    font-family: $font1;
+    font-size: 3rem;
+    text-align: center;
+
+    &::after{
+        content: "*";
+        position: absolute;
+        transform: translateY(-6px);
+        color: $color1;
+
+      
+    }
+    &:hover:after{
+        font-size: 2em;
+    }
+}
+section{
+    height: 600px;
+    @include center;
+
+    p{
+        text-align: center;
+        width: 50%;
+    }
+}
