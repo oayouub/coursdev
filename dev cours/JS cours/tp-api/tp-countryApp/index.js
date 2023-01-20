@@ -7,7 +7,9 @@
 
 // 7 - Gérer les 3 boutons pour trier (méthode sort()) les pays
 let countryData = [];
+let sortMethod = "maxToMin";
 const card = document.querySelector('.countries-container');
+const btnSort = document.querySelectorAll('.btnSort');
 const input = document.querySelector('input');
 
 async function countryF(){
@@ -20,6 +22,17 @@ displayCountry();
 
 function displayCountry(){
     card.innerHTML = countryData
+    .filter((country)=> country.translations.fra.common.toLowerCase().includes(inputSearch.value.toLowerCase()))
+    .sort((a, b)=>{
+        if(sortMethod ==="maxToMin"){
+        return b.population - a.population
+        } else if (sortMethod === "minToMax"){
+           return a.population - b.population
+        } else if(sortMethod === "alpha"){
+            return a.translations.fra.common.localeCompare(b.translations.fra.common)
+        }
+    })
+    .slice(0, inputRange.value)
 .map(
     (country) =>`
     <div class ="card">
@@ -41,3 +54,16 @@ input.addEventListener("input", (e) => {
   });
 
 window.addEventListener('load',countryF);
+inputSearch.addEventListener('input',displayCountry);
+
+inputRange.addEventListener('input',()=>{
+    displayCountry();
+    rangeValue.textContent = inputRange.value;
+});
+
+btnSort.forEach((btn)=>{
+    btn.addEventListener('click', (e)=>{
+        sortMethod = e.target.id;
+        displayCountry();
+    })
+})
